@@ -1,3 +1,4 @@
+# Main Launch File
 # Duplicate of ros2_control_solo12/ros2_control_bolt_bringup/launch/bolt_system_position_only.launch.py
 # Modified description_file to be system_solo1_description.urdf.xacro
 # And base_launch to be bolt_rz_test_one_joint.launch.py instead of bolt.launch.py
@@ -72,7 +73,7 @@ def generate_launch_description():
     base_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([ThisLaunchFileDir(), "/bolt_solo1_test_one_joint_motor8.launch.py"]),
         launch_arguments={
-            "description_file": "system_solo1_motor_8.ros2_control.xacro",
+            "description_file": "system_solo1_motor8_description.urdf.xacro",
             "prefix": prefix,
             "use_fake_hardware": use_fake_hardware,
             "fake_sensor_commands": fake_sensor_commands,
